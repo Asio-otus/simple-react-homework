@@ -5,7 +5,7 @@ import Message from "./Message";
 const messageData = {
     avatar: "https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg",
     name: "Mark Kadiner",
-    message: "Not the most elegant solution with the SVG. I will try to figure out a better way for me to put the sprite sheet in state.",
+    message: "Not the most elegant solution with the SVG. I will try to figure out a better way to refactor it in a real project",
     time: "22:00",
 };
 
