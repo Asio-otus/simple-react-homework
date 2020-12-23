@@ -1,5 +1,6 @@
 import React from "react";
 import {AffairType} from "./HW2";
+import s from "./Affairs.module.scss";
 
 type AffairPropsType = {
     // key не нужно типизировать
@@ -14,7 +15,7 @@ function Affair(props: AffairPropsType) {
         <div>
             <span>{props.affair.name}</span>
 
-            <button onClick={deleteCallback}>X</button>
+            <button className={s.button} onClick={deleteCallback}>X</button>
         </div>
     );
 }

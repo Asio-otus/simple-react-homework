@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./HW12.module.css";
+import s from "./HW12.module.scss";
 
 const themes = ['dark', 'red', 'some'];
 
