@@ -1,4 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+@import "src/styles/variables";
+@import "src/styles/title.module";
+
 .App {
+  padding: 0 20px;
+  font-size: $font-size-global;
+  font-family: $font-primary;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  min-height: 10vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.homework {
+  width: 50vw;
+}
 

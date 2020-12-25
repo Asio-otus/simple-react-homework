@@ -7,10 +7,20 @@ import HW3 from "../../../p2-homeworks/h3/HW3";
 function App() {
     return (
         <div className={s.App}>
-            <div>react homeworks:</div>
-            <HW1/>
-            <HW2/>
-            <HW3/>
+            <div className={s.container}>
+                <div className={s.header}>
+                    <div className={s.title}>React homework</div>
+                </div>
+                <div className={s.homework}>
+                    <HW1/>
+                </div>
+                <div className={s.homework}>
+                    <HW2/>
+                </div>
+                <div className={s.homework}>
+                    <HW3/>
+                </div>
+            </div>
             {/*<HW4/>*/}
             {/*<HW5/>*/}
 

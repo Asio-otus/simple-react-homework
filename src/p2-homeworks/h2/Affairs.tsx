@@ -6,7 +6,7 @@ import s from './Affairs.module.scss'
 type AffairsPropsType = { // need to fix any
     data: Array<AffairType>;
     setFilter: (filter: FilterType) => void;
-    deleteAffairCallback: (id: number) => void; //
+    deleteAffairCallback: (id: number) => void;
 }
 
 function Affairs(props: AffairsPropsType) {
@@ -28,10 +28,10 @@ function Affairs(props: AffairsPropsType) {
 
             {mappedAffairs}
 
-            <button className={s.button} onClick={setAll}>All</button>
-            <button className={s.button} onClick={setHigh}>High</button>
-            <button className={s.button} onClick={setMiddle}>Middle</button>
-            <button className={s.button} onClick={setLow}>Low</button>
+            <button className={s.btn} onClick={setAll}>All</button>
+            <button className={s.btn} onClick={setHigh}>High</button>
+            <button className={s.btn} onClick={setMiddle}>Middle</button>
+            <button className={s.btn} onClick={setLow}>Low</button>
         </div>
     );
 }

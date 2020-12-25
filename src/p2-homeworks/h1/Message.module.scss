@@ -1,9 +1,5 @@
-:root {
-    --bubble-bg-color: #252525;
-    --name-color: #FFA4F0;
-    --message-color: #E4E4E4;
-    --time-color: #959595;
-}
+@import "src/styles/variables";
+@import "src/styles/avatar.module";
 
 .wrapper {
     display: flex;
@@ -14,7 +10,7 @@
 .messageBubble {
     max-width: 20vw;
     position: relative;
-    background-color: var(--bubble-bg-color);
+    background-color: $color-black;
     margin-left: 20px;
     padding: 10px 70px 10px 15px;
 
@@ -29,25 +25,17 @@
 
     width: 12px;
     height: 17px;
-    fill: var(--bubble-bg-color);
-}
-
-.avatar {
-    width: 60px;
-    height: 60px;
-
-    border: 1px solid var(--message-color);
-    border-radius: 30px;
+    fill: $color-black;
 }
 
 .name {
     padding-bottom: 5px;
-    color: var(--name-color);
+    color: $color-primary;
     font-weight: 600;
 }
 
 .message {
-    color: var(--message-color);
+    color: $color-white;
 }
 
 .time {
@@ -55,5 +43,5 @@
     bottom: 10px;
     right: 10px;
 
-    color: var(--time-color);
+    color: $color-secondary;
 }

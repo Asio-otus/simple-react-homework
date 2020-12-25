@@ -1,5 +1,8 @@
-.someClass {
+@import "src/styles/variables";
+@import "src/styles/btn.module";
 
+.closeIcon {
+  width: 15px;
+  height: 15px;
+  fill: $color-black;
 }
-
-@import "src/styles/button.module";

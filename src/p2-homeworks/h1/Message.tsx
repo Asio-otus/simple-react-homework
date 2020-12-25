@@ -13,7 +13,7 @@ function Message(props: PropsType) {
         <div className={style.wrapper}>
             <img className={style.avatar} src={props.avatar} alt="Avatar"/>
             <div className={style.messageBubble}>
-                <svg className={style.messageBubble_tail} version="1.1"
+                <svg className={style.messageBubble_tail}
                      baseProfile="full"
                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 53.96 79.43">
                     <path
