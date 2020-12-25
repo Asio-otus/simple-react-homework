@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import Affairs from "./Affairs";
+import s from "./Affairs.module.scss";
 
 // ---TYPES
 export type AffairPriorityType = "low" | "middle" | "high";
@@ -43,19 +44,14 @@ function HW2() {
 
     return (
         <div>
-            homework 2
-
-            {/*should work (должно работать)*/}
-            <Affairs
-                data={filteredAffairs}
-                setFilter={setFilter}
-                deleteAffairCallback={deleteAffairCallback}
-            />
-
-            {/*<hr/>*/}
-            {/*/!*для личного творчества, могу проверить*!/*/}
-            {/*/!*<AlternativeAffairs/>*!/*/}
-            {/*<hr/>*/}
+            <div className={s.subTitle}>Homework - 2</div>
+            <div className={s.affairs}>
+                <Affairs
+                    data={filteredAffairs}
+                    setFilter={setFilter}
+                    deleteAffairCallback={deleteAffairCallback}
+                />
+            </div>
         </div>
     );
 }

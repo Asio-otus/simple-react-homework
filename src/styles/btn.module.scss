@@ -1,8 +1,10 @@
 @import "src/styles/variables";
 
 @mixin buttonGeneral {
-  background-color: $color-grey-low;
   border: none;
+  cursor: pointer;
+  box-shadow: $box-shadow;
+  background-color: $color-grey-low;
 }
 
 @mixin buttonHover {

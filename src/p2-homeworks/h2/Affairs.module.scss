@@ -1,8 +1,36 @@
 @import "src/styles/variables";
 @import "src/styles/btn.module";
+@import "src/styles/subTitle.module";
+
+.affairs {
+  width: 300px;
+}
+
+.affair {
+  background-color: $color-grey-low;
+  padding: .5rem .6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 7px;
+
+  box-shadow: $box-shadow;
+
+  //border-bottom: 1px solid $color-black;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+.filterWrapper {
+  display: flex;
+  justify-content: space-between;
+}
 
 .closeIcon {
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   fill: $color-black;
 }

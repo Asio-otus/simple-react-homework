@@ -1,5 +1,27 @@
+@import "src/styles/variables";
+@import "src/styles/btn.module";
+@import "src/styles/subTitle.module";
+
 .greetingContainer {
     display: flex;
+    align-items: center;
 }
 
-@import "src/styles/btn.module";
+.input {
+    padding: .5rem 1rem;
+    border: 0 solid;
+    border-radius: 7px;
+    box-shadow: $box-shadow;
+}
+
+.inputError {
+    box-shadow: inset $box-shadow-red;
+}
+
+.marginLeft1 {
+    margin-left: 1rem;
+}
+
+.paddingTop1 {
+    padding-top: 1rem;
+}

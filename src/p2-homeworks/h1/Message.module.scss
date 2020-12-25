@@ -1,10 +1,10 @@
 @import "src/styles/variables";
 @import "src/styles/avatar.module";
+@import "src/styles/subTitle.module";
 
 .wrapper {
     display: flex;
     align-items: flex-end;
-    margin-left: 20px;
 }
 
 .messageBubble {
