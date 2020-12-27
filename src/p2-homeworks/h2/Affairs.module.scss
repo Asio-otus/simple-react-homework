@@ -7,21 +7,24 @@
 }
 
 .affair {
-  background-color: $color-grey-low;
+  //background-color: $color-grey-low;
   padding: .5rem .6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  border-radius: 7px;
+  box-shadow: $box-shadow-bottom;
 
-  box-shadow: $box-shadow;
-
-  //border-bottom: 1px solid $color-black;
+  border-bottom: 1px solid $color-grey-mid;
 
   &:not(:last-child) {
     margin-bottom: 1rem;
   }
+}
+
+.priority {
+  padding-right: 10px;
+  color: $color-grey-mid;
 }
 
 .filterWrapper {
