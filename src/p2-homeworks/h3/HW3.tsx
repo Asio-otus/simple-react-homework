@@ -6,7 +6,6 @@ import s from "./Greeting.module.scss";
 export type UserType = {
     _id: string
     name: string
-    length?: number
 }
 
 // уровень работы с глобальными данными
