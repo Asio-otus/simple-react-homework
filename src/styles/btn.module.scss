@@ -7,22 +7,35 @@
   background-color: $color-grey-low;
 }
 
+@mixin buttonShapeRegular {
+  padding: .5rem 1rem;
+  border-radius: 5px;
+}
+
 @mixin buttonHover {
   background-color: $color-primary;
 }
 
 .btn {
   @include buttonGeneral;
-  padding: .5rem 1rem;
-  border-radius: 5px;
+  @include buttonShapeRegular;
 
   &:hover {
     @include buttonHover;
     color: $color-white;
   }
 
+  &Red {
+    background-color: $color-primary-an1;
+    color: $color-white;
+
+    &:hover {
+      background-color: $color-black;
+      color: $color-grey-low;
+    }
+  }
+
   &Close {
-    @include buttonGeneral;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -30,8 +43,6 @@
     border-radius: 30px;
 
     &:hover {
-      @include buttonHover;
-
       & > svg{
         fill: $color-white;
       }

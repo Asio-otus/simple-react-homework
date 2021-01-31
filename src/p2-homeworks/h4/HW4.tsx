@@ -44,7 +44,8 @@ function HW4() {
                 {/*should work (должно работать)*/}
                 <SuperCheckbox
                     checked={checked}
-                    onChangeChecked={setChecked}
+                    onChangeChecked={setChecked} // ???
+                    onChange={testOnChange}
                 >
                     some text {/*// этот текст попадёт в children*/}
                 </SuperCheckbox>

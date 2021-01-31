@@ -19,7 +19,7 @@ function Affair(props: AffairPropsType) {
             <span>{props.affair.name}</span>
             <div>
                 <span className={s.priority}>{props.priority}</span>
-                <button className={s.btnClose} onClick={deleteCallback}>
+                <button className={`${s.btn} ${s.btnClose}`} onClick={deleteCallback}>
                     <svg className={s.closeIcon}
                          id="close"
                          xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
