@@ -3,15 +3,15 @@
 @import "../../styles-shared/subTitle.module";
 @import "../../styles-shared/input.module";
 
-.greetingContainer {
-    display: flex;
-    align-items: center;
+.superInput {
+    background: rebeccapurple;
 }
 
-.marginLeft1 {
-    margin-left: 1rem;
+.errorInput {
+    border: 3px solid lime;
+    background: red;
 }
 
-.paddingTop1 {
-    padding-top: 1rem;
+.error {
+    color: red;
 }

@@ -1,6 +1,6 @@
-@import "src/styles/variables";
-@import "src/styles/avatar.module";
-@import "src/styles/subTitle.module";
+@import "../../styles-shared/variables";
+@import "../../styles-shared/avatar.module";
+@import "../../styles-shared/subTitle.module";
 
 .wrapper {
     display: flex;
