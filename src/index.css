@@ -163,7 +163,7 @@ img {
    ========================================================================== */
 
 /**
- * 1. Change the font styles-shared in all browsers.
+ * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
  */
 
@@ -222,7 +222,7 @@ button::-moz-focus-inner,
 }
 
 /**
- * Restore the focus styles-shared unset by the previous rule.
+ * Restore the focus styles unset by the previous rule.
  */
 
 button:-moz-focusring,

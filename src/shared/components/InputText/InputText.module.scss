@@ -1,0 +1,22 @@
+@import "../../styles/variables";
+
+.textInput {
+    width: 300px;
+    padding: .5rem 1rem;
+    border: 0 solid;
+    border-radius: 7px;
+    box-shadow: $box-shadow;
+}
+
+.textInputError {
+    box-shadow: inset $box-shadow-red;
+}
+
+.errorContainer {
+    padding-top: 10px;
+    width: 300px;
+}
+
+.error {
+    color: $color-primary-an1;
+}

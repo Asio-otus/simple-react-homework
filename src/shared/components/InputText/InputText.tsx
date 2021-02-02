@@ -30,6 +30,7 @@ const InputText: React.FC<SuperInputTextPropsType> = (
 
         onChangeText && onChangeText(e.currentTarget.value);
     }
+
     const onKeyPressCallback = (e: KeyboardEvent<HTMLInputElement>) => {
         onKeyPress && onKeyPress(e);
 
@@ -42,7 +43,7 @@ const InputText: React.FC<SuperInputTextPropsType> = (
     const finalInputClassName = `${error ? (`${s.textInputError} ${s.textInput}`) : s.textInput} ${className ? className : ""}`; // need to fix with (?:) and s.superInput... Maybe fixed
 
     return (
-        <>
+        <div>
             <input
                 type={"text"}
                 onChange={onChangeCallback}
@@ -51,8 +52,10 @@ const InputText: React.FC<SuperInputTextPropsType> = (
 
                 {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
             />
-            {error && <span className={finalSpanClassName}>{error}</span>}
-        </>
+            <div className={s.errorContainer}>
+                {error && <span className={finalSpanClassName}>{error}</span>}
+            </div>
+        </div>
     );
 }
 

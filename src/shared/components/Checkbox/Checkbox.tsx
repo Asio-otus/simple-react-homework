@@ -27,7 +27,7 @@ const Checkbox: React.FC<SuperCheckboxPropsType> = (
     const finalInputClassName = `${s.checkbox} ${className ? className : ""}`;
 
     return (
-        <label className={s.checkBoxLabel}>
+        <label className={s.checkboxCustom}>
             <input
                 type={"checkbox"}
                 onChange={onChangeCallback}
@@ -35,7 +35,7 @@ const Checkbox: React.FC<SuperCheckboxPropsType> = (
 
                 {...restProps} // отдаём инпуту остальные пропсы если они есть (checked например там внутри)
             />
-            {children && <span className={s.spanClassName}>{children}</span>}
+            <span className={s.spanClassName}>{children}</span> {/* Убрал проверку на наличие children так как у меня стили кастомного чекбокса привязаны к лейблу и если не будет спана то не будет и чкбокса */}
         </label> // благодаря label нажатие на спан передастся в инпут
     );
 }

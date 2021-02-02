@@ -1,8 +1,8 @@
 import React, {ChangeEvent, useState} from "react";
 import s from "./HW4.module.scss";
-import InputText from "../../components-shared/InputText/InputText";
-import Button from "../../components-shared/Button/Button";
-import Checkbox from "../../components-shared/Checkbox/Checkbox";
+import InputText from "../../shared/components/InputText/InputText";
+import Button from "../../shared/components/Button/Button";
+import Checkbox from "../../shared/components/Checkbox/Checkbox";
 
 function HW4() {
     const [text, setText] = useState<string>("");
@@ -35,7 +35,7 @@ function HW4() {
 
                     {/*should work (должно работать)*/}
                     <Button
-                        red // пропсу с булевым значением не обязательно указывать true
+                        buttonStyle={'red'}
                         onClick={showAlert}
                     >
                         delete {/*// название кнопки попадёт в children*/}

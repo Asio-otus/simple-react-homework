@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {homeWorkReducer} from "./bll/homeWorkReducer";
-import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
+import Button from "../../shared/components/Button/Button";
 
 const initialPeople = [
     {_id: 0, name: "Кот", age: 3},
@@ -30,7 +30,7 @@ function HW8() {
             {/*should work (должно работать)*/}
 
             {finalPeople}
-            <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
+            <div><Button onClick={sortUp}>sort up</Button></div>
             <div>sort down</div>
 
             check 18

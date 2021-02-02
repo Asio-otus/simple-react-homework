@@ -4,21 +4,33 @@ import s from "./Button.module.scss";
 // тип пропсов обычной кнопки, children в котором храниться название кнопки там уже описан
 type DefaultButtonPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
 
+type buttonStyleType = 'close' | 'red'
+
 type SuperButtonPropsType = DefaultButtonPropsType & {
-    red?: boolean
+    buttonStyle?: buttonStyleType
 }
 
 const Button: React.FC<SuperButtonPropsType> = (
     {
-        red, className,
+        buttonStyle, className,
         ...restProps// все остальные пропсы попадут в объект restProps, там же будет children
     }
 ) => {
-    const finalClassName = `${red ? `${s.btn} ${s.btnRed}` : s.btn} ${className}`;
+
+    let finalClassName  = () => {
+        let defaultBtn = `${s.btn} ${className ? className : ""}`
+    switch (buttonStyle) {
+        case 'close': return  `${defaultBtn} ${s.btnClose}`;
+        case 'red': return `${defaultBtn} ${s.btnRed}`;
+        default: return `${defaultBtn}`;
+        }
+    }
+
+
 
     return (
         <button
-            className={finalClassName}
+            className={finalClassName()}
             {...restProps} // отдаём кнопке остальные пропсы если они есть (children там внутри)
         />
     );

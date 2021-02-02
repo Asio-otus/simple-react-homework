@@ -1,11 +1,9 @@
-@import "../../styles-shared/variables";
-@import "../../styles-shared/btn.module";
-@import "../../styles-shared/subTitle.module";
-@import "../../styles-shared/input.module";
+@import "../../shared/styles/variables";
+@import "../../shared/styles/subTitle.module";
 
 .greetingContainer {
     display: flex;
-    align-items: center;
+    align-items: start;
 }
 
 .marginLeft1 {

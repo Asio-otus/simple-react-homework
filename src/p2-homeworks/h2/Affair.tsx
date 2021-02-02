@@ -1,6 +1,7 @@
 import React from "react";
 import {AffairPriorityType, AffairType} from "./HW2";
 import s from "./Affairs.module.scss";
+import Button from "../../shared/components/Button/Button";
 
 type AffairPropsType = {
     // key не нужно типизировать
@@ -19,7 +20,7 @@ function Affair(props: AffairPropsType) {
             <span>{props.affair.name}</span>
             <div>
                 <span className={s.priority}>{props.priority}</span>
-                <button className={`${s.btn} ${s.btnClose}`} onClick={deleteCallback}>
+                <Button buttonStyle={'close'} onClick={deleteCallback}>
                     <svg className={s.closeIcon}
                          id="close"
                          xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -34,7 +35,7 @@ function Affair(props: AffairPropsType) {
                             </g>
                         </g>
                     </svg>
-                </button>
+                </Button>
             </div>
         </div>
     );
