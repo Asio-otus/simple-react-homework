@@ -1,0 +1,44 @@
+@import "src/shared/styles/variables";
+
+.header {
+  height: 10vh;
+}
+
+.burger {
+  cursor: pointer;
+}
+
+.nav {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &Item {
+    padding-bottom: 2em;
+  }
+
+  &Closed {
+    position: relative;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+.link {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  color: $color-primary;
+  text-decoration: none;
+
+  &Icon {
+    fill: $color-primary;
+  }
+
+  &Title {
+    position: absolute;
+    left: 2em;
+  }
+}

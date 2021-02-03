@@ -1,27 +1,31 @@
 import React from "react";
+import {Switch, Route, Redirect} from "react-router-dom";
+import Error404 from "./pages/Error404";
+import {navLinksDataType} from "./bll/navLinksData";
 
-export const PATH = {
-    PRE_JUNIOR: "/pre-junior",
-    // add paths
+type RoutesPropsType = {
+    navData: navLinksDataType
 }
 
-function Routes() {
+const Routes: React.FC<RoutesPropsType> = (
+    {navData}
+) => {
     return (
         <div>
             {/*Switch выбирает первый подходящий роут*/}
-            {/*<Switch>*/}
+            <Switch>
 
-            {/*в начале мы попадаем на страницу "/" и переходим сразу на страницу PRE_JUNIOR*/}
-            {/*exact нужен чтоб указать полное совподение (что после "/" ничего не будет)*/}
-            {/*<Route path={"/"} exact render={() => <Redirect to={PRE_JUNIOR}/>}/>*/}
+                {/*в начале мы попадаем на страницу "/" и переходим сразу на страницу PRE_JUNIOR*/}
+                {/*exact нужен чтоб указать полное совподение (что после "/" ничего не будет)*/}
+                <Route path={"/"} exact render={() => <Redirect to={navData[0].path}/>}/>
 
-            {/*<Route path={PRE_JUNIOR} render={() => <PreJunior/>}/>*/}
-                // add routes
+                {navData.map( nav =>
+                    <Route path={nav.path} render={() => nav.route} />)}
 
-            {/*у этого роута нет пути, он отрисуется если пользователь захочет попасть на несуществующую страницу*/}
-            {/*<Route render={() => <Error404/>}/>*/}
+                {/*у этого роута нет пути, он отрисуется если пользователь захочет попасть на несуществующую страницу*/}
+                <Route render={() => <Error404/>}/>
 
-            {/*</Switch>*/}
+            </Switch>
         </div>
     );
 }

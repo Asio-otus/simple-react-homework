@@ -1,0 +1,18 @@
+@import "src/shared/styles/variables";
+@import "../../../shared/styles/title.module";
+
+.header {
+  display: flex;
+  align-items: center;
+  min-height: 10vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.homework {
+  padding: 20px 0;
+  width: 100vw;
+}
