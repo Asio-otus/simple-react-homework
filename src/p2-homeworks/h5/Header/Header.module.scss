@@ -1,44 +1,156 @@
 @import "src/shared/styles/variables";
 
 .header {
-  height: 10vh;
+  position: fixed;
+  width: 100vw;
+  height: $header-size;
+  background-color: $color-black;
+  z-index: 100;
+
+  &Container {
+    @include containerSize;
+
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &Logo {
+    display: flex;
+    align-items: center;
+  }
+
+  &Icon {
+    fill: $color-white;
+  }
+
+  &Title {
+    padding-left: 15px;
+
+    font-family: $font-secondary;
+    font-size: 2rem;
+    color: $color-white;
+  }
 }
 
 .burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+
+  width: 40px;
+  height: 40px;
+
+  color: white;
+
   cursor: pointer;
+  transition: all .5s ease-in-out;
+
+  &:hover .burgerLine,
+  &:hover .burgerLine:before,
+  &:hover .burgerLine:after {
+    background-color: $color-primary;
+  }
+  &Open:hover .burgerLine {
+      background: transparent;
+  }
+
+  &Open .burgerLine {
+    transform: translateX(-50px);
+    background: transparent;
+
+    &:before {
+      transform: rotate(45deg) translate(35px, -35px);
+    }
+
+    &:after {
+      transform: rotate(-45deg) translate(35px, 35px);
+    }
+  }
+
+
+  &Line {
+    width: 25px;
+    height: 3px;
+    background: $color-white;
+    transition: all .5s ease-in-out;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+
+      width: 25px;
+      height: 3px;
+
+      background: $color-white;
+
+      transition: all .5s ease-in-out;
+
+    }
+
+    &:before {
+      transform: translateY(-8px);
+    }
+
+    &:after {
+      transform: translateY(8px);
+    }
+  }
 }
 
 .nav {
-  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99;
+
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+
+  padding: $header-size 0;
+
+  height: calc(100vh - #{$header-size});;
+  width: 200px;
+
+  background-color: $color-black;
+
+  transition: all .2s ease-in-out;
 
   &Item {
+    margin-left: 2em;
     padding-bottom: 2em;
+
+    &:first-child {
+      padding-top: 2em;
+    }
   }
 
   &Closed {
-    position: relative;
     opacity: 0;
-    z-index: -1;
   }
 }
 
 .link {
-  position: relative;
   display: flex;
   align-items: center;
 
-  color: $color-primary;
+  color: $color-white;
   text-decoration: none;
 
-  &Icon {
+  &:hover > span {
+    color: $color-primary;
     fill: $color-primary;
   }
 
+  &Icon {
+    fill: $color-white;
+  }
+
   &Title {
-    position: absolute;
-    left: 2em;
+    padding-left: 1em;
   }
 }

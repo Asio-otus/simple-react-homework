@@ -23,7 +23,7 @@ const Routes: React.FC<RoutesPropsType> = (
                     <Route path={nav.path} render={() => nav.route} />)}
 
                 {/*у этого роута нет пути, он отрисуется если пользователь захочет попасть на несуществующую страницу*/}
-                <Route render={() => <Error404/>}/>
+                <Route render={() => <Error404 navData={navData}/>}/>
 
             </Switch>
         </div>

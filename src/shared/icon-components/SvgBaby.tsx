@@ -3,7 +3,7 @@ import * as React from "react";
 function SvgBaby(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
-      id="baby_svg__Capa_1"
+      id="SvgBaby"
       height={20}
       width={20}
       viewBox="0 -10 512 512"

@@ -3,7 +3,7 @@ import * as React from "react";
 function SvgCat(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
-      id="cat_svg__Capa_1"
+      id="SvgCat"
       xmlns="http://www.w3.org/2000/svg"
       x={0}
       y={0}

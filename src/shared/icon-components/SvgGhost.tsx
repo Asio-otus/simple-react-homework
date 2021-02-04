@@ -3,7 +3,7 @@ import * as React from "react";
 function SvgGhost(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
-      id="ghost_svg__Capa_1"
+      id="SvgGhost"
       xmlns="http://www.w3.org/2000/svg"
       x={0}
       y={0}

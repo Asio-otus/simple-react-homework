@@ -8,9 +8,9 @@ import s from "./pages.module.scss";
 function PreJunior() {
     return (
         <div>
-            <div className={s.container}>
+            <div className={s.page}>
                 <div className={s.header}>
-                    <div className={s.title}>5-е ДЗ в процессе</div>
+                    <div className={s.title}>Pre junior tasks</div>
                 </div>
                 <div className={s.homework}>
                     <HW1/>
