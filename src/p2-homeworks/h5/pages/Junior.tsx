@@ -1,10 +1,7 @@
 import React from "react";
-import HW1 from "../../h1/HW1";
-import HW2 from "../../h2/HW2";
-import HW3 from "../../h3/HW3";
-import HW4 from "../../h4/HW4";
 import s from "./pages.module.scss";
 import HW7 from "../../h7/HW7";
+import HW8 from "../../h8/HW8";
 
 function Junior() {
     return (
@@ -15,6 +12,9 @@ function Junior() {
                 </div>
                 <div className={s.homework}>
                     <HW7/>
+                </div>
+                <div className={s.homework}>
+                    <HW8/>
                 </div>
             </div>
 
