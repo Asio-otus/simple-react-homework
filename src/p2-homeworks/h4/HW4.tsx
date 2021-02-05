@@ -54,12 +54,12 @@ function HW4() {
                     <Checkbox checked={checked} onChange={testOnChange}/>
                 </div>
 
-                <hr/>
-                {/*для личного творчества, могу проверить*/}
-                {/*<InputTextAlt/>*/}
-                {/*<ButtonAlt/>*/}
-                {/*<CheckboxAlt/>*/}
-                <hr/>
+                {/*<hr/>*/}
+                {/*/!*для личного творчества, могу проверить*!/*/}
+                {/*/!*<InputTextAlt/>*!/*/}
+                {/*/!*<ButtonAlt/>*!/*/}
+                {/*/!*<CheckboxAlt/>*!/*/}
+                {/*<hr/>*/}
             </div>
             </div>
     );

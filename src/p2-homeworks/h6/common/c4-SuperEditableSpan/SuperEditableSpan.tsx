@@ -1,5 +1,7 @@
 import React, {DetailedHTMLProps, InputHTMLAttributes, HTMLAttributes, useState} from "react";
 import InputText from "../../../../shared/components/InputText/InputText";
+import SvgPen from "../../../../shared/icon-components/SvgPen";
+import s from './EditableSpan.module.scss'
 
 // тип пропсов обычного инпута
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
@@ -31,22 +33,25 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
     const {children, onDoubleClick, className, ...restSpanProps} = spanProps || {};
 
     const onEnterCallback = () => {
-        // setEditMode(); // выключить editMode при нажатии Enter
+        setEditMode(false); // выключить editMode при нажатии Enter
 
         onEnter && onEnter();
     };
     const onBlurCallback = (e: React.FocusEvent<HTMLInputElement>) => {
-        // setEditMode(); // выключить editMode при нажатии за пределами инпута
+        setEditMode(false); // выключить editMode при нажатии за пределами инпута
 
         onBlur && onBlur(e);
     };
     const onDoubleClickCallBack = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
-        // setEditMode(); // включить editMode при двойном клике
+        setEditMode(true); // включить editMode при двойном клике
 
         onDoubleClick && onDoubleClick(e);
     };
 
-    const spanClassName = `${"сделать красивый стиль для спана"} ${className}`;
+    // const spanClassName = `${"сделать красивый стиль для спана"} ${className}`; //
+    // Стиль сделал при навидении будет отображаться карандашь.
+    // А понять можно ли редактировать текст, можно только в контексте использовантя данного компонента.
+    //
 
     return (
         <>
@@ -56,19 +61,23 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
                         autoFocus // пропсу с булевым значением не обязательно указывать true
                         onBlur={onBlurCallback}
                         onEnter={onEnterCallback}
+                        className={s.editInput}
 
                         {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
                     />
                 ) : (
-                    <span
-                        onDoubleClick={onDoubleClickCallBack}
-                        className={spanClassName}
+                    <div className={s.editSpan}>
+                        <span
+                            onDoubleClick={onDoubleClickCallBack}
+                            className={s.editSpanText}
 
-                        {...restSpanProps}
-                    >
+                            {...restSpanProps}
+                        >
                         {/*если нет захардкодженного текста для спана, то значение инпута*/}
-                        {children || restProps.value}
-                    </span>
+                            {children || restProps.value}
+                        </span>
+                        <SvgPen className={s.editSpanIcon}/>
+                    </div>
                 )
             }
         </>

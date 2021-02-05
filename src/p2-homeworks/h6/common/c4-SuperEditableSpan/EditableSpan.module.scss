@@ -1,0 +1,29 @@
+@import "src/shared/styles/variables";
+
+.edit{
+
+  &Input {
+    margin: 0;
+    padding: 0;
+
+    height: 20px;
+
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+
+    line-height: 0;
+  }
+  &Span {
+    height: 20px;
+    &:hover .editSpanIcon{
+      fill: $color-primary;
+    }
+
+    &Icon {
+      padding-left: 10px;
+      fill: transparent;
+    }
+  }
+}

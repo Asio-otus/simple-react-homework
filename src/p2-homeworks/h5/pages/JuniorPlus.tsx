@@ -12,18 +12,6 @@ function JuniorPlus() {
                 <div className={s.header}>
                     <div className={s.title}>Junior plus tasks</div>
                 </div>
-                <div className={s.homework}>
-                    <HW1/>
-                </div>
-                <div className={s.homework}>
-                    <HW2/>
-                </div>
-                <div className={s.homework}>
-                    <HW3/>
-                </div>
-                <div className={s.homework}>
-                    <HW4/>
-                </div>
             </div>
 
         </div>
