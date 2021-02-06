@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Button from "../../shared/components/Button/Button";
+import Button from "../../shared/components/functional/Button/Button";
 
 function Clock() {
     const [timerId, setTimerId] = useState<number>(0);

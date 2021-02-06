@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {homeWorkReducer} from "./bll/homeWorkReducer";
-import Button from "../../shared/components/Button/Button";
+import Button from "../../shared/components/functional/Button/Button";
+import {Subtitle} from "../../shared/components/styled/Subtitle/Subtitle";
 
 const initialPeople = [
     {_id: 0, name: "Кот", age: 3},
@@ -16,7 +17,7 @@ function HW8() {
 
     const finalPeople = people.map(p => (
         <div key={p._id}>
-            some name, age
+            {p.name}, {p.age}
         </div>
     ))
 
@@ -24,8 +25,9 @@ function HW8() {
 
     return (
         <div>
-            <hr/>
-            homeworks 8
+            <Subtitle>
+                Task 8
+            </Subtitle>
 
             {/*should work (должно работать)*/}
 
@@ -35,10 +37,10 @@ function HW8() {
 
             check 18
 
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativePeople/>*/}
-            <hr/>
+            {/*<hr/>*/}
+            {/*/!*для личного творчества, могу проверить*!/*/}
+            {/*/!*<AlternativePeople/>*!/*/}
+            {/*<hr/>*/}
         </div>
     );
 }

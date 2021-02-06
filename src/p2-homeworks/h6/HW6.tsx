@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import SuperEditableSpan from "./common/c4-SuperEditableSpan/SuperEditableSpan";
 import {restoreState, saveState} from "./localStorage/localStorage";
-import Button from "../../shared/components/Button/Button";
+import Button from "../../shared/components/functional/Button/Button";
+import {Subtitle} from "../../shared/components/styled/Subtitle/Subtitle";
 
 function HW6() {
     const [value, setValue] = useState<string>("");
@@ -15,8 +16,9 @@ function HW6() {
 
     return (
         <div>
-            {/*<hr/>*/}
-            {/*homeworks 6*/}
+            <Subtitle>
+                Task 6
+            </Subtitle>
 
             {/*should work (должно работать)*/}
             <div>

@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import GreetingContainer from "./GreetingContainer";
 import s from "./Greeting.module.scss";
+import {Subtitle} from "../../shared/components/styled/Subtitle/Subtitle";
 
 // types
 export type UserType = {
@@ -18,7 +19,9 @@ function HW3() {
 
     return (
         <div>
-            <div className={s.subTitle}>Homework - 3</div>
+            <Subtitle>
+                Task 3
+            </Subtitle>
 
             {/*should work (должно работать)*/}
             <GreetingContainer users={users} addUserCallback={addUserCallback}/>

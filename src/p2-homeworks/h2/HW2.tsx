@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Affairs from "./Affairs";
 import s from "./Affairs.module.scss";
+import {Subtitle} from "../../shared/components/styled/Subtitle/Subtitle";
 
 // ---TYPES
 export type AffairPriorityType = "low" | "middle" | "high";
@@ -44,7 +45,9 @@ function HW2() {
 
     return (
         <div>
-            <div className={s.subTitle}>Homework - 2</div>
+            <Subtitle>
+                Task 2
+            </Subtitle>
             <div className={s.affairs}>
                 <Affairs
                     data={filteredAffairs}

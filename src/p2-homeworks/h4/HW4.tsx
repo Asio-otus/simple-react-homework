@@ -1,8 +1,9 @@
 import React, {ChangeEvent, useState} from "react";
 import s from "./HW4.module.scss";
-import InputText from "../../shared/components/InputText/InputText";
-import Button from "../../shared/components/Button/Button";
-import Checkbox from "../../shared/components/Checkbox/Checkbox";
+import InputText from "../../shared/components/functional/InputText/InputText";
+import Button from "../../shared/components/functional/Button/Button";
+import Checkbox from "../../shared/components/functional/Checkbox/Checkbox";
+import {Subtitle} from "../../shared/components/styled/Subtitle/Subtitle";
 
 function HW4() {
     const [text, setText] = useState<string>("");
@@ -20,7 +21,9 @@ function HW4() {
 
     return (
         <div>
-            <div className={s.subTitle}>homeworks - 4</div>
+            <Subtitle>
+                Task 4
+            </Subtitle>
 
             <div>
                 <div className={s.column}>

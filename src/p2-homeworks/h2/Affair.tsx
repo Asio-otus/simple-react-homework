@@ -1,7 +1,7 @@
 import React from "react";
 import {AffairPriorityType, AffairType} from "./HW2";
 import s from "./Affairs.module.scss";
-import Button from "../../shared/components/Button/Button";
+import Button from "../../shared/components/functional/Button/Button";
 
 type AffairPropsType = {
     // key не нужно типизировать

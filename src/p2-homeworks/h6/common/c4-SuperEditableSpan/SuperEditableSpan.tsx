@@ -1,6 +1,6 @@
 import React, {DetailedHTMLProps, InputHTMLAttributes, HTMLAttributes, useState} from "react";
-import InputText from "../../../../shared/components/InputText/InputText";
-import SvgPen from "../../../../shared/icon-components/SvgPen";
+import InputText from "../../../../shared/components/functional/InputText/InputText";
+import SvgPen from "../../../../shared/components/svg/SvgPen";
 import s from './EditableSpan.module.scss'
 
 // тип пропсов обычного инпута

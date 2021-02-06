@@ -2,7 +2,7 @@ import React from "react";
 import Affair from "./Affair";
 import {AffairType, FilterType} from "./HW2";
 import s from './Affairs.module.scss'
-import Button from "../../shared/components/Button/Button";
+import Button from "../../shared/components/functional/Button/Button";
 
 type AffairsPropsType = { // need to fix any
     data: Array<AffairType>;

@@ -3,9 +3,9 @@ import React from "react";
 import PreJunior from "../pages/PreJunior";
 import Junior from "../pages/Junior";
 import JuniorPlus from "../pages/JuniorPlus";
-import SvgGhost from "../../../shared/icon-components/SvgGhost";
-import SvgBaby from "../../../shared/icon-components/SvgBaby";
-import SvgCat from "../../../shared/icon-components/SvgCat";
+import SvgGhost from "../../../shared/components/svg/SvgGhost";
+import SvgBaby from "../../../shared/components/svg/SvgBaby";
+import SvgCat from "../../../shared/components/svg/SvgCat";
 
 export type navLinksDataType = Array<{
     title: string

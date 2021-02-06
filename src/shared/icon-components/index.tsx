@@ -1,6 +1,0 @@
-export { default as SvgBaby } from './SvgBaby'
-export { default as SvgCat } from './SvgCat'
-export { default as SvgChick } from './SvgChick'
-export { default as SvgDead404 } from './SvgDead404'
-export { default as SvgGhost } from './SvgGhost'
-export { default as SvgPen } from './SvgPen'

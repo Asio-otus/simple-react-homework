@@ -1,5 +1,4 @@
-@import "src/shared/styles/variables";
-@import "../../../shared/styles/title.module";
+@import "../../../shared/global-styles/variables";
 
 .header {
   display: flex;
@@ -26,6 +25,13 @@
 
 .homework {
   padding: 20px 0;
+}
+
+
+.title {
+  font-family: $font-secondary;
+  font-weight: 600;
+  font-size: 2rem;
 }
 
 .errorPageTitle {
