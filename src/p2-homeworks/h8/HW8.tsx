@@ -2,6 +2,15 @@ import React, {useState} from "react";
 import {homeWorkReducer} from "./bll/homeWorkReducer";
 import Button from "../../shared/components/functional/Button/Button";
 import {Subtitle} from "../../shared/components/styled/Subtitle/Subtitle";
+import s from './HW8.module.scss'
+
+export type H8UserType = {
+    _id: number
+    name: string
+    age: number
+}
+
+export type StateType = Array<H8UserType>
 
 const initialPeople = [
     {_id: 0, name: "Кот", age: 3},
@@ -22,6 +31,8 @@ function HW8() {
     ))
 
     const sortUp = () => setPeople(homeWorkReducer(initialPeople, {type: "sort", payload: "up"}))
+    const sortDown = () => setPeople(homeWorkReducer(initialPeople, {type: "sort", payload: "down"}))
+    const check18 = () => setPeople(homeWorkReducer(initialPeople, {type: "check", payload: 18}))
 
     return (
         <div>
@@ -32,10 +43,12 @@ function HW8() {
             {/*should work (должно работать)*/}
 
             {finalPeople}
-            <div><Button onClick={sortUp}>sort up</Button></div>
-            <div>sort down</div>
+            <div className={s.buttonContainer}>
+                <div><Button onClick={sortUp}>sort up</Button></div>
+                <div><Button onClick={sortDown}>sort down</Button></div>
+                <div><Button onClick={check18}>check 18</Button></div>
+            </div>
 
-            check 18
 
             {/*<hr/>*/}
             {/*/!*для личного творчества, могу проверить*!/*/}
