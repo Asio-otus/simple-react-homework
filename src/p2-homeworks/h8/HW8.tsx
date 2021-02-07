@@ -3,6 +3,7 @@ import {homeWorkReducer} from "./bll/homeWorkReducer";
 import Button from "../../shared/components/functional/Button/Button";
 import {Subtitle} from "../../shared/components/styled/Subtitle/Subtitle";
 import s from './HW8.module.scss'
+import {ButtonContainer} from "../../shared/components/styled/ButtonContainer/ButtonContainer";
 
 export type H8UserType = {
     _id: number
@@ -43,11 +44,11 @@ function HW8() {
             {/*should work (должно работать)*/}
 
             {finalPeople}
-            <div className={s.buttonContainer}>
-                <div><Button onClick={sortUp}>sort up</Button></div>
-                <div><Button onClick={sortDown}>sort down</Button></div>
-                <div><Button onClick={check18}>check 18</Button></div>
-            </div>
+            <ButtonContainer>
+                <Button onClick={sortUp}>sort up</Button>
+                <Button onClick={sortDown}>sort down</Button>
+                <Button onClick={check18}>check 18</Button>
+            </ButtonContainer>
 
 
             {/*<hr/>*/}
