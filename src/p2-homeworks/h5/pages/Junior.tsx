@@ -3,6 +3,7 @@ import s from "./pages.module.scss";
 import HW7 from "../../h7/HW7";
 import HW8 from "../../h8/HW8";
 import HW9 from "../../h9/HW9";
+import HW10 from "../../h10/HW10";
 
 function Junior() {
     return (
@@ -19,6 +20,9 @@ function Junior() {
                 </div>
                 <div className={s.homework}>
                     <HW9/>
+                </div>
+                <div className={s.homework}>
+                    <HW10/>
                 </div>
             </div>
 

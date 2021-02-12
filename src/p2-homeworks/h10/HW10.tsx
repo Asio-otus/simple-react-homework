@@ -1,25 +1,37 @@
 import React from "react";
 import Button from "../../shared/components/functional/Button/Button";
+import {Subtitle} from "../../shared/components/styled/Subtitle/Subtitle";
+import {useDispatch, useSelector} from "react-redux";
+import { AppStoreType } from "./bll/store";
+import {loadingStateType, startLoadingAC, stopLoadingAC} from "./bll/loadingReducer";
+import {Preloader} from "../../shared/components/styled/Preloader/Preloader";
 
 function HW10() {
-    // useSelector, useDispatch
-    const loading = false;
+    const dispatch = useDispatch()
+    const loadingState = useSelector<AppStoreType, loadingStateType>(state => state.loading)
+
+    const loading = loadingState.loading;
 
     const setLoading = () => {
-        // dispatch
-        // setTimeout
+        dispatch(startLoadingAC())
         console.log("loading...");
+        setTimeout( () => {
+            dispatch(stopLoadingAC())
+        }, 2000)
     };
 
     return (
         <div>
-            <hr/>
-            homeworks 10
+            <Subtitle>
+                Task 10
+            </Subtitle>
 
             {/*should work (должно работать)*/}
             {loading
                 ? (
-                    <div>крутилка...</div>
+                    <div>
+                        <Preloader/>
+                    </div>
                 ) : (
                     <div>
                         <Button onClick={setLoading}>set loading...</Button>
@@ -27,10 +39,10 @@ function HW10() {
                 )
             }
 
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<Alternative/>*/}
-            <hr/>
+            {/*<hr/>*/}
+            {/*/!*для личного творчества, могу проверить*!/*/}
+            {/*/!*<Alternative/>*!/*/}
+            {/*<hr/>*/}
         </div>
     );
 }
