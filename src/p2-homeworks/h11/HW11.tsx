@@ -1,37 +1,33 @@
 import React, {useState} from "react";
-import SuperRange from "./common/c7-SuperRange/SuperRange";
-import SuperDoubleRange from "./common/c8-SuperDoubleRange/SuperDoubleRange";
+import {Subtitle} from "../../shared/components/styled/Subtitle/Subtitle";
+import {SuperRange} from "./common/c8-SuperRange/SuperRange";
 
 function HW11() {
-    const [value1, setValue1] = useState(0);
-    const [value2, setValue2] = useState(100);
+    const [value, setValue] = useState<number[]>([0, 100]);
+
+    const changeInputValue = (newValue: number | number[]) => {
+        if (typeof newValue === "number") {
+            setValue([newValue, value[1]])
+        } else {
+            setValue(newValue)
+        }
+    }
 
     return (
         <div>
-            <hr/>
-            homeworks 11
-
-            {/*should work (должно работать)*/}
+            <Subtitle>
+                Task 11
+            </Subtitle>
             <div>
-                <span>{value1}</span>
-                <SuperRange
-                    // сделать так чтоб value1 изменялось
-                />
+                <div>Value 1: {value[0]}</div>
+                <div>Value 2: {value[1]}</div>
             </div>
-
             <div>
-                <span>{value1}</span>
-                <SuperDoubleRange
-                    // сделать так чтоб value1 и value2 изменялось
-                />
-                <span>{value2}</span>
+                <SuperRange value={value[0]} onChangeRange={changeInputValue}/>
             </div>
-
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeSuperRange/>*/}
-            {/*<AlternativeSuperDoubleRange/>*/}
-            <hr/>
+            <div>
+                <SuperRange value={[...value]} onChangeRange={changeInputValue}/>
+            </div>
         </div>
     );
 }
