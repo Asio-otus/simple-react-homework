@@ -17,16 +17,21 @@ function HW12() {
         dispatch(changeThemeColor(theme))
     }
 
+
     useEffect(() => {
-        debugger
         let root = document.documentElement
         const themeColor = (color: ThemeColorType) => {
             switch (color) {
-                case 'pink': return '#e00e69'
-                case 'green': return '#54c30f'
-                case 'blue': return '#2176c1'
-                case 'orange': return '#e3700b'
-                default: return '#e00e69'
+                case 'pink':
+                    return '#e00e69'
+                case 'green':
+                    return '#54c30f'
+                case 'blue':
+                    return '#2176c1'
+                case 'orange':
+                    return '#e3700b'
+                default:
+                    return '#e00e69'
             }
         }
         root.style.setProperty('--theme-color', themeColor(theme.themeColor))
@@ -34,11 +39,9 @@ function HW12() {
 
     return (
         <div>
-            <span className={s[+'-text']}>
-                <Subtitle>
-                    Task 12
-                </Subtitle>
-            </span>
+            <Subtitle>
+                Task 12
+            </Subtitle>
             <div className={s.themeCheck}>
                 Current theme color
             </div>

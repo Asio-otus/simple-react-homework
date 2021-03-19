@@ -60,14 +60,14 @@
   }
 }
 
-input {
+.input {
   position:absolute;
   left:-99999px;
 
   opacity:0;
 }
 
-input:checked + label {
+.input:checked + label {
   order: 1;
   position:relative;
   z-index:2;
@@ -76,7 +76,7 @@ input:checked + label {
   border-top:none;
 }
 
-input:checked + label:after {
+.input:checked + label:after {
   content:'';
 
   position:absolute;
@@ -93,7 +93,7 @@ input:checked + label:after {
   pointer-events:none;
 }
 
-input:checked + label:before {
+.input:checked + label:before {
   content: '';
 
   position:absolute;

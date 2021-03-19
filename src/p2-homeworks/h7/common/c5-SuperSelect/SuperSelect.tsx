@@ -25,6 +25,7 @@ const SuperSelect: React.FC<SuperSelectPropsType> = (
         return (
             <>
                 <input key={option}
+                       className={s.input}
                        onChange={onChangeCallback}
                        name="test" type="radio"
                        id={option}
