@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import SuperSelect from "./common/c5-SuperSelect/SuperSelect";
 import SuperRadio from "./common/c6-SuperRadio/SuperRadio";
-import {Subtitle} from "../../shared/components/styled/Subtitle/Subtitle";
+import {Subtitle} from "../../components/styled/Subtitle/Subtitle";
 import s from './HW7.module.scss'
 
 const arr = ["x", "y", "z"];

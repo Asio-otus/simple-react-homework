@@ -1,10 +1,10 @@
 import React from "react";
-import Button from "../../shared/components/functional/Button/Button";
-import {Subtitle} from "../../shared/components/styled/Subtitle/Subtitle";
+import Button from "../../components/functional/Button/Button";
+import {Subtitle} from "../../components/styled/Subtitle/Subtitle";
 import {useDispatch, useSelector} from "react-redux";
 import { AppRootStateType } from "./bll/store";
 import {loadingStateType, startLoadingAC, stopLoadingAC} from "./bll/loadingReducer";
-import {Preloader} from "../../shared/components/styled/Preloader/Preloader";
+import {Preloader} from "../../components/styled/Preloader/Preloader";
 
 function HW10() {
     const dispatch = useDispatch()

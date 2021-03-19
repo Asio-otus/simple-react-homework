@@ -1,6 +1,6 @@
 import React from "react";
 import Clock from "./Clock";
-import {Subtitle} from "../../shared/components/styled/Subtitle/Subtitle";
+import {Subtitle} from "../../components/styled/Subtitle/Subtitle";
 
 function HW9() {
     return (

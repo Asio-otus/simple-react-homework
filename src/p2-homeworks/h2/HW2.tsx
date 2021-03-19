@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import Affairs from "./Affairs";
 import s from "./Affairs.module.scss";
-import {Subtitle} from "../../shared/components/styled/Subtitle/Subtitle";
+import {Subtitle} from "../../components/styled/Subtitle/Subtitle";
 
 // ---TYPES
 export type AffairPriorityType = "low" | "middle" | "high";

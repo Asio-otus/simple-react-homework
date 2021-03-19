@@ -2,8 +2,8 @@ import React from "react";
 import s from "./pages.module.scss";
 import {NavLink} from "react-router-dom";
 import {navLinksDataType} from "../bll/navLinksData";
-import SvgDead404 from "../../../shared/components/svg/SvgDead404";
-import Button from "../../../shared/components/functional/Button/Button";
+import SvgDead404 from "../../../components/svg/SvgDead404";
+import Button from "../../../components/functional/Button/Button";
 
 type Error404PropsType = {
     navData: navLinksDataType

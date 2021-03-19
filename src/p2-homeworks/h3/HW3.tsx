@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import GreetingContainer from "./GreetingContainer";
 import s from "./Greeting.module.scss";
-import {Subtitle} from "../../shared/components/styled/Subtitle/Subtitle";
+import {Subtitle} from "../../components/styled/Subtitle/Subtitle";
 
 // types
 export type UserType = {

@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import s from "./HW12.module.scss";
-import {Subtitle} from "../../shared/components/styled/Subtitle/Subtitle";
+import {Subtitle} from "../../components/styled/Subtitle/Subtitle";
 import {useDispatch, useSelector} from "react-redux";
 import {AppRootStateType} from "../h10/bll/store";
 import {changeThemeColor, ThemeColorType, ThemeStateType} from "../h10/bll/themeReducer";

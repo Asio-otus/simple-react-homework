@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Subtitle} from "../../shared/components/styled/Subtitle/Subtitle";
+import {Subtitle} from "../../components/styled/Subtitle/Subtitle";
 import {SuperRange} from "./common/c8-SuperRange/SuperRange";
 
 function HW11() {

@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 import {homeWorkReducer} from "./bll/homeWorkReducer";
-import Button from "../../shared/components/functional/Button/Button";
-import {Subtitle} from "../../shared/components/styled/Subtitle/Subtitle";
+import Button from "../../components/functional/Button/Button";
+import {Subtitle} from "../../components/styled/Subtitle/Subtitle";
 import s from './HW8.module.scss'
-import {ButtonContainer} from "../../shared/components/styled/ButtonContainer/ButtonContainer";
+import {ButtonContainer} from "../../components/styled/ButtonContainer/ButtonContainer";
 
 export type H8UserType = {
     _id: number

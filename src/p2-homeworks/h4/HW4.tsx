@@ -1,9 +1,9 @@
 import React, {ChangeEvent, useState} from "react";
 import s from "./HW4.module.scss";
-import InputText from "../../shared/components/functional/InputText/InputText";
-import Button from "../../shared/components/functional/Button/Button";
-import Checkbox from "../../shared/components/functional/Checkbox/Checkbox";
-import {Subtitle} from "../../shared/components/styled/Subtitle/Subtitle";
+import InputText from "../../components/functional/InputText/InputText";
+import Button from "../../components/functional/Button/Button";
+import Checkbox from "../../components/functional/Checkbox/Checkbox";
+import {Subtitle} from "../../components/styled/Subtitle/Subtitle";
 
 function HW4() {
     const [text, setText] = useState<string>("");

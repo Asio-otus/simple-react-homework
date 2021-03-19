@@ -2,7 +2,7 @@ import React from "react";
 import AlternativeMessage from "./AlternativeMessage";
 import Message from "./Message";
 import s from './Message.module.scss'
-import {Subtitle} from "../../shared/components/styled/Subtitle/Subtitle";
+import {Subtitle} from "../../components/styled/Subtitle/Subtitle";
 
 const messageData = {
     avatar: "https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg",

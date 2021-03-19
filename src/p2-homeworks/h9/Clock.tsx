@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import Button from "../../shared/components/functional/Button/Button";
-import {ButtonContainer} from "../../shared/components/styled/ButtonContainer/ButtonContainer";
+import Button from "../../components/functional/Button/Button";
+import {ButtonContainer} from "../../components/styled/ButtonContainer/ButtonContainer";
 
 function Clock() {
     const [timerId, setTimerId] = useState<number>(0);

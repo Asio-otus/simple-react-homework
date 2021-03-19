@@ -1,7 +1,7 @@
 import React, {ChangeEvent} from "react";
 import s from "./Greeting.module.scss";
-import InputText from "../../shared/components/functional/InputText/InputText";
-import Button from "../../shared/components/functional/Button/Button";
+import InputText from "../../components/functional/InputText/InputText";
+import Button from "../../components/functional/Button/Button";
 
 type GreetingPropsType = {
     name: string

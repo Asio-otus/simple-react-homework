@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {NavLink} from "react-router-dom";
 import s from "./Header.module.scss"
 import {navLinksDataType} from "../bll/navLinksData";
-import SvgChick from "../../../shared/components/svg/SvgChick";
+import SvgChick from "../../../components/svg/SvgChick";
 
 type HeaderPropsType = {
     navData: navLinksDataType
