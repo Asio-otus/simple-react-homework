@@ -2,13 +2,13 @@ import React from "react";
 import Button from "../../shared/components/functional/Button/Button";
 import {Subtitle} from "../../shared/components/styled/Subtitle/Subtitle";
 import {useDispatch, useSelector} from "react-redux";
-import { AppStoreType } from "./bll/store";
+import { AppRootStateType } from "./bll/store";
 import {loadingStateType, startLoadingAC, stopLoadingAC} from "./bll/loadingReducer";
 import {Preloader} from "../../shared/components/styled/Preloader/Preloader";
 
 function HW10() {
     const dispatch = useDispatch()
-    const loadingState = useSelector<AppStoreType, loadingStateType>(state => state.loading)
+    const loadingState = useSelector<AppRootStateType, loadingStateType>(state => state.loading)
 
     const loading = loadingState.loading;
 

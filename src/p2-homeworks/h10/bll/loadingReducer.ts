@@ -6,7 +6,8 @@ type StopLoadingActionType = {
     type: 'STOP_LOADING'
 }
 
-type ActionType = StartLoadingActionType | StopLoadingActionType
+type ActionType = ReturnType<typeof startLoadingAC>
+    | ReturnType<typeof stopLoadingAC>
 
 export type loadingStateType = typeof initState
 
@@ -22,14 +23,15 @@ export const loadingReducer = (state = initState, action: ActionType): loadingSt
         case 'STOP_LOADING': {
             return {...state, loading: false};
         }
-        default: return state;
+        default:
+            return state;
     }
 };
 
-export const startLoadingAC = (): StartLoadingActionType => {
-    return {type: 'START_LOADING'}
+export const startLoadingAC = () => {
+    return ({type: 'START_LOADING'} as const)
 };
 
-export const stopLoadingAC = (): StopLoadingActionType => {
-    return {type: 'STOP_LOADING'}
+export const stopLoadingAC = () => {
+    return ({type: 'STOP_LOADING'} as const)
 };

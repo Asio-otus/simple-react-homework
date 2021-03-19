@@ -1,23 +1,12 @@
-.dark {
-    background: dimgrey;
-}
+@import "./src/styles/variables";
 
-.dark-text {
-    color: aliceblue;
-}
+.themeCheck {
+    margin-bottom: 20px;
+    padding: 15px;
 
-.red {
-    background: lightcoral;
-}
+    border-radius: 5px;
+    box-shadow: $box-shadow;
 
-.red-text {
-    color: aqua;
-}
-
-.some {
-    background: lightgreen;
-}
-
-.some-text {
-    color: darkslateblue;
+    color: $color-white;
+    background-color: $color-primary;
 }

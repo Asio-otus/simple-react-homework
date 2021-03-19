@@ -29,7 +29,6 @@ function Junior() {
                     <HW11/>
                 </div>
             </div>
-
         </div>
     );
 }

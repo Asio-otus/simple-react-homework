@@ -1,9 +1,6 @@
 import React from "react";
-import HW1 from "../../h1/HW1";
-import HW2 from "../../h2/HW2";
-import HW3 from "../../h3/HW3";
-import HW4 from "../../h4/HW4";
 import s from "./pages.module.scss";
+import HW12 from "../../h12/HW12";
 
 function JuniorPlus() {
     return (
@@ -11,6 +8,9 @@ function JuniorPlus() {
             <div className={s.page}>
                 <div className={s.header}>
                     <div className={s.title}>Junior plus tasks</div>
+                </div>
+                <div className={s.homework}>
+                    <HW12/>
                 </div>
             </div>
 
