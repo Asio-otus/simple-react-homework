@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import SuperSelect from "./common/c5-SuperSelect/SuperSelect";
 import SuperRadio from "./common/c6-SuperRadio/SuperRadio";
 import {Subtitle} from "../../shared/components/styled/Subtitle/Subtitle";
+import s from './HW7.module.scss'
 
 const arr = ["x", "y", "z"];
 
@@ -13,8 +14,8 @@ function HW7() {
             <Subtitle>
                 Task 7
             </Subtitle>
-            {/*should work (должно работать)*/}
-            <div>
+
+            <div className={s.selectContainer}>
                 <SuperSelect
                     options={arr}
                     value={value}

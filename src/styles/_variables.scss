@@ -20,7 +20,5 @@ $box-shadow-red: 0 0 5px $color-primary-an1;
 
 $header-size: 100px;
 @mixin containerSize {
-  //max-width: 1400px;
-  //margin: 0 auto;
   padding: 0 40px;
 }
