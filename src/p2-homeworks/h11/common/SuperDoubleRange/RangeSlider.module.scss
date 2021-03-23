@@ -1,0 +1,22 @@
+@import 'src/styles/variables';
+
+.styledSlider {
+  width: 50%;
+  height: 2px;
+}
+
+.styledThumb {
+  height: 15px;
+  width: 15px;
+  background-color: $color-primary;
+  margin-top: -6.5px;
+  border-radius: 50%;
+  cursor: grab;
+  color: transparent;
+}
+
+.styledTrack {
+  border-radius: 2px;
+  background: tomato;
+  height: 2px;
+}

@@ -118,7 +118,7 @@
 
   background-color: $color-black;
 
-  transition: all .2s ease-in-out;
+  transition: all .4s ease-in-out;
 
   &Item {
     margin-left: 2em;
@@ -131,6 +131,7 @@
 
   &Closed {
     opacity: 0;
+    right: -200px;
   }
 }
 

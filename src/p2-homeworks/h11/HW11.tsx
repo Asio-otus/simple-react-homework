@@ -1,16 +1,21 @@
 import React, {useState} from "react";
 import {Subtitle} from "../../components/styled/Subtitle/Subtitle";
-import {SuperRange} from "./common/c8-SuperRange/SuperRange";
+import SliderCustom from "./common/SuperRange/SliderCustom";
+import RangeSlider from "./common/SuperDoubleRange/RangeSlider";
 
-function HW11() {
-    const [value, setValue] = useState<number[]>([0, 100]);
+export function HW11() {
+    // Singles slider state
+    const [value, setValue] = useState(0);
 
-    const changeInputValue = (newValue: number | number[]) => {
-        if (typeof newValue === "number") {
-            setValue([newValue, value[1]])
-        } else {
-            setValue(newValue)
-        }
+    // Double slider state
+    const [values, setValues] = useState([0, 100]);
+
+    const changeInputValue = (newValue: number) => {
+        setValue(newValue)
+    }
+
+    const changeRangeInputValues = (values: Array<number>) => {
+        setValues(values)
     }
 
     return (
@@ -19,17 +24,20 @@ function HW11() {
                 Task 11
             </Subtitle>
             <div>
-                <div>Value 1: {value[0]}</div>
-                <div>Value 2: {value[1]}</div>
+                <div>Value: {value}</div>
+            </div>
+            {/*<div>*/}
+            {/*    <SliderCustom value={value} onChangeRange={changeInputValue}/>*/}
+            {/*</div>*/}
+            <div>
+                <RangeSlider values={value} onChangeRange={changeInputValue}/>
             </div>
             <div>
-                <SuperRange value={value[0]} onChangeRange={changeInputValue}/>
+                <div>Values: {values}</div>
             </div>
             <div>
-                <SuperRange value={[...value]} onChangeRange={changeInputValue}/>
+                <RangeSlider values={values} onChangeRange={changeRangeInputValues}/>
             </div>
         </div>
     );
 }
-
-export default HW11;

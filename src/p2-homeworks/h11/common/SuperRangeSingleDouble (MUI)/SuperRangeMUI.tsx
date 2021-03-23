@@ -12,7 +12,7 @@ type SuperDoubleRangePropsType = {
     disabled?: boolean
 }
 
-export const SuperRange: React.FC<SuperDoubleRangePropsType> = (
+export const SuperRangeMUI: React.FC<SuperDoubleRangePropsType> = (
     {
         onChangeRange, value,
         min, max, step, disabled
